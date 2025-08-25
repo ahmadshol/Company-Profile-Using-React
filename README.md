@@ -4,32 +4,44 @@ Berikut adalah panduan lengkap untuk menjalankan project React JS ini dari awal 
 
  **1. Clone Repository**
 
-`git clone https://github.com/username/maestro-suspension.gitcd maestro-suspension`
+```bash
+git clone https://github.com/username/maestro-suspension.gitcd maestro-suspension
+```
 
 **2. Install Dependencies**
 Pastikan Node.js & npm sudah terinstall.
 Install semua dependency dengan:
 
-`npm install`
+```bash
+npm install
+```
 
 **3. Jalankan Development Server**
 
-`npm run dev`
+```bash
+npm run dev
+```
 
 atau jika menggunakan create-react-app:
 
-`npm start`
+```bash
+npm start
+```
 
 **4. Akses Aplikasi**
 
 >Buka browser dan akses:
 
 
-`http://localhost:5173`
+```bash
+http://localhost:5173
+```
 
 **atau**
 
-`http://localhost:3000`
+```bash
+http://localhost:3000
+```
 
 **(sesuai output terminal)**
 
@@ -47,7 +59,9 @@ atau jika menggunakan create-react-app:
 
 **7. Build untuk Produksi**
 
-`npm run build`
+```bash
+npm run build
+```
 
 **8. Catatan**
 >Pastikan environment sudah mendukung Node.js minimal versi 16.
