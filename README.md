@@ -1,12 +1,64 @@
-# React + Vite
+# Maestro Suspension Web - Dokumentasi Instalasi & Menjalankan Sistem
+Selamat datang di repository Maestro Suspension!
+Berikut adalah panduan lengkap untuk menjalankan project React JS ini dari awal di lokal Anda.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ **1. Clone Repository**
 
-Currently, two official plugins are available:
+`git clone https://github.com/username/maestro-suspension.gitcd maestro-suspension`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**2. Install Dependencies**
+Pastikan Node.js & npm sudah terinstall.
+Install semua dependency dengan:
 
-## Expanding the ESLint configuration
+`npm install`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**3. Jalankan Development Server**
+
+`npm run dev`
+
+atau jika menggunakan create-react-app:
+
+`npm start`
+
+**4. Akses Aplikasi**
+
+>Buka browser dan akses:
+
+
+`http://localhost:5173`
+
+**atau**
+
+`http://localhost:3000`
+
+**(sesuai output terminal)**
+
+**5. Struktur Folder Penting**
+* components — Komponen React (Navbar, Hero, About, dll)
+* App.jsx — Root aplikasi & routing
+* src/useDarkMode.js — Custom hook dark mode
+
+
+**6. Fitur Utama**
+* Routing antar halaman (Home, About, Services, Contact)
+* Responsive Navbar dengan sidebar di mobile
+* Dark mode toggle (ikon bulan/matahari)
+* Testimonial carousel di halaman utama
+
+**7. Build untuk Produksi**
+
+`npm run build`
+
+**8. Catatan**
+>Pastikan environment sudah mendukung Node.js minimal versi 16.
+Jika ada error, cek pesan di terminal & browser console.
+
+**9. Kontribusi**
+>Pull request & issue sangat diterima!
+Silakan fork repo ini, buat branch baru, dan ajukan PR.
+
+Selamat mencoba!
+Jika ada pertanyaan, silakan buka issue di repo ini.
+
+
+
