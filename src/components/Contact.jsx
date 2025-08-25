@@ -31,13 +31,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto my-20 px-6 fade-in">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
             Hubungi Kami
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto dark:text-gray-300">
             Tertarik dengan layanan kami? Hubungi kami dan kami akan dengan
             senang hati membantu Anda.
           </p>
@@ -46,12 +46,12 @@ const Contact = () => {
 
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 dark:text-white">
               Informasi Kontak
             </h3>
 
             <div className="flex items-start mb-6">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4 dark:bg-blue-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 text-primary"
@@ -74,15 +74,17 @@ const Contact = () => {
                 </svg>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800">Alamat</h4>
-                <p className="text-gray-600">
+                <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
+                  Alamat
+                </h4>
+                <p className="text-gray-600 dark:text-white">
                   Jl. Raya Suspensi No. 123, Jakarta Selatan, Indonesia
                 </p>
               </div>
             </div>
 
             <div className="flex items-start mb-6">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4 dark:bg-blue-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 text-primary"
@@ -99,13 +101,17 @@ const Contact = () => {
                 </svg>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800">Telepon</h4>
-                <p className="text-gray-600">+62 21 1234 5678</p>
+                <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
+                  Telepon
+                </h4>
+                <p className="text-gray-600 dark:text-white">
+                  +62 21 1234 5678
+                </p>
               </div>
             </div>
 
             <div className="flex items-start mb-6">
-              <div className="bg-blue-100 p-3 rounded-full mr-4">
+              <div className="bg-blue-100 p-3 rounded-full mr-4 dark:bg-blue-800">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 text-primary"
@@ -122,23 +128,27 @@ const Contact = () => {
                 </svg>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-gray-800">Email</h4>
-                <p className="text-gray-600">info@maestrosuspension.com</p>
+                <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
+                  Email
+                </h4>
+                <p className="text-gray-600 dark:text-white">
+                  info@maestrosuspension.com
+                </p>
               </div>
             </div>
 
             <div className="mt-10">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6 dark:text-white">
                 Jam Operasional
               </h3>
-              <p className="text-gray-600 mb-2">
+              <p className="text-gray-600 mb-2 dark:text-white">
                 <span className="font-semibold">Senin - Jumat:</span> 08:00 -
                 17:00
               </p>
-              <p className="text-gray-600 mb-2">
+              <p className="text-gray-600 mb-2 dark:text-white">
                 <span className="font-semibold">Sabtu:</span> 09:00 - 15:00
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-white">
                 <span className="font-semibold">Minggu:</span> Tutup
               </p>
             </div>
@@ -147,14 +157,17 @@ const Contact = () => {
           <div className="md:w-1/2 md:pl-8">
             <form
               onSubmit={handleSubmit}
-              className="bg-white p-8 rounded-lg shadow-md"
+              className="bg-white p-8 rounded-lg shadow-md dark:bg-gray-800"
             >
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6 dark:text-white">
                 Kirim Pesan
               </h3>
 
               <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-gray-700 mb-2 dark:text-white"
+                >
                   Nama Lengkap
                 </label>
                 <input
@@ -169,7 +182,10 @@ const Contact = () => {
               </div>
 
               <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 mb-2 dark:text-white"
+                >
                   Email
                 </label>
                 <input
@@ -184,7 +200,10 @@ const Contact = () => {
               </div>
 
               <div className="mb-4">
-                <label htmlFor="phone" className="block text-gray-700 mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-gray-700 mb-2 dark:text-white"
+                >
                   Nomor Telepon
                 </label>
                 <input
@@ -199,7 +218,10 @@ const Contact = () => {
               </div>
 
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-gray-700 mb-2 dark:text-white"
+                >
                   Pesan
                 </label>
                 <textarea
