@@ -1,6 +1,6 @@
-# Maestro Suspension Web - Dokumentasi Instalasi & Menjalankan Sistem
+# Maestro Suspension Web - Dokumentasi Instalasi & Menjalankan Sistem 🙌
 Selamat datang di repository Maestro Suspension!
-Berikut adalah panduan lengkap untuk menjalankan project React JS ini dari awal di lokal Anda.
+Berikut adalah panduan lengkap untuk menjalankan project React JS ini dari awal di lokal Anda.😉
 
  **1. Clone Repository**
 
