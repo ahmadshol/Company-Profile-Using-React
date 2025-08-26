@@ -173,13 +173,6 @@ const About = () => {
                   <p className="text-gray-600 font-medium">Tahun Pengalaman</p>
                 </div>
               </div>
-
-              {/* CTA Button */}
-              <div className="mt-8">
-                <button className="bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                  Pelajari Lebih Lanjut
-                </button>
-              </div>
             </div>
           </div>
         </div>

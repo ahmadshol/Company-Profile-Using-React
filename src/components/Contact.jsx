@@ -86,7 +86,8 @@ const Contact = () => {
                   Alamat
                 </h4>
                 <p className="text-gray-600 dark:text-white">
-                  Jl. Raya Suspensi No. 123, Jakarta Selatan, Indonesia
+                  Depan Bank Bri, Jl. Sragen - Solo, Kebayanan 1, Duyungan, Kec.
+                  Sidoharjo, Kabupaten Sragen, Jawa Tengah 57281
                 </p>
               </div>
             </div>
@@ -113,7 +114,7 @@ const Contact = () => {
                   Telepon
                 </h4>
                 <p className="text-gray-600 dark:text-white">
-                  +62 21 1234 5678
+                  +62 895-2505-7711
                 </p>
               </div>
             </div>
