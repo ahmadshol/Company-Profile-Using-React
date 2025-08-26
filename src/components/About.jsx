@@ -5,6 +5,13 @@ const About = () => {
   const imageContainerRef = useRef(null);
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
+
+  useEffect(() => {
     const handleMouseMove = (e) => {
       if (!imageContainerRef.current) return;
 
@@ -102,7 +109,7 @@ const About = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-2xl">
                 <img
-                  src="assets/about.jpg"
+                  src="assets/img1.jpg"
                   alt="Tentang Maestro Suspension"
                   className="w-full h-auto rounded-2xl transition-transform duration-300 ease-out"
                   style={transformStyle}

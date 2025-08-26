@@ -6,6 +6,13 @@ const Hero = () => {
   const imageContainerRef = useRef(null);
 
   useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+      });
+    }, []);
+
+  useEffect(() => {
     const handleMouseMove = (e) => {
       if (!imageContainerRef.current) return;
 
@@ -225,9 +232,9 @@ const Hero = () => {
 
               {/* CTA Button */}
               <div className="mt-8">
-                <button className="bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                <Link to="/services" className="bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
                   Pelajari Lebih Lanjut
-                </button>
+                </Link>
               </div>
             </div>
             <div

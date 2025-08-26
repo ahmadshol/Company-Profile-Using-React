@@ -6,6 +6,13 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+      });
+    }, []);
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {

@@ -1,4 +1,14 @@
+import React, { useEffect } from "react";
+
 const Services = () => {
+
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+      });
+    }, []);
+
   const services = [
     {
       icon: (
@@ -173,7 +183,7 @@ const Services = () => {
         </div>
       </section>
 
-      <section id="services" className="pb-16 bg-slate-100 dark:bg-dark">
+      <section id="Layanan" className="pb-16 bg-slate-100 dark:bg-dark">
         <div className="max-w-7xl mx-auto pt-10 px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">
