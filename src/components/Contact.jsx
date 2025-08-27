@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { useEffect } from "react";
-
+import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -10,11 +11,15 @@ const Contact = () => {
   });
 
   useEffect(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-      });
-    }, []);
+    AOS.init({ once: true, duration: 800 });
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -25,23 +30,41 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-    alert(
-      "Terima kasih! Pesan Anda telah terkirim. Kami akan menghubungi Anda segera."
-    );
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+
+    emailjs
+      .send(
+        "service_3jkthpd", 
+        "template_qbdwdpw", 
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          from_phone: formData.phone,
+          message: formData.message,
+        },
+        "PAVLgwtUyB49mdZzX" 
+      )
+      .then(
+        (result) => {
+          alert(
+            "Terima kasih! Pesan Anda telah terkirim. Kami akan menghubungi Anda segera."
+          );
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        },
+        (error) => {
+          alert("Maaf, pesan gagal dikirim. Silakan coba lagi.");
+        }
+      );
   };
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto my-20 px-6 fade-in">
-        <div className="text-center mb-16">
+        <div data-aos="fade-down" className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
             Hubungi Kami
           </h2>
@@ -53,7 +76,7 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
+          <div data-aos="fade-right" className="md:w-1/2 mb-10 md:mb-0 md:pr-8">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6 dark:text-white">
               Informasi Kontak
             </h3>
@@ -161,9 +184,18 @@ const Contact = () => {
                 <span className="font-semibold">Minggu:</span> Tutup
               </p>
             </div>
+            <iframe
+              className="w-full h-150 mt-10 rounded-lg shadow-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453.4741879488949!2d110.9691946683927!3d-7.45011533920564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1bda80dc6d81%3A0x882314f229b5d23!2sMAESTRO%20SUSPENSION%20SRAGEN%20(%20Spesialis%20Suspensi%20Kaki-Kaki%20%26%20Shock%20Breaker%20)!5e0!3m2!1sid!2sid!4v1756267717978!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
 
-          <div className="md:w-1/2 md:pl-8">
+          <div data-aos="fade-left" className="md:w-1/2 md:pl-8">
             <form
               onSubmit={handleSubmit}
               className="bg-white p-8 rounded-lg shadow-md dark:bg-gray-800"
@@ -210,7 +242,7 @@ const Contact = () => {
 
               <div className="mb-4">
                 <label
-                  htmlFor="phone"
+                  htmlFor="message"
                   className="block text-gray-700 mb-2 dark:text-white"
                 >
                   Nomor Telepon

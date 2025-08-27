@@ -1,9 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import emailjs from "@emailjs/browser";
+import imgTesti1 from "/assets/testi1.avif";
+import imgTesti2 from "/assets/testi2.avif";
+import imgTesti3 from "/assets/testi3.avif";
+
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const imageContainerRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
 
   useEffect(() => {
       window.scrollTo({
@@ -54,31 +65,27 @@ const Hero = () => {
   };
 
   const testimonials = [
-      {
-        quote:
-          "Layanan perbaikan suspensi di Maestro sangat memuaskan. Mobil saya sekarang nyaman kembali seperti baru.",
-        author: "Ahmad Rizki",
-        position: "Pemilik Toyota Fortuner",
-        image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      },
-      {
-        quote:
-          "Teknisi yang profesional dan sparepart yang original. Hasilnya sangat memuaskan, recommended banget!",
-        author: "Linda Sari",
-        position: "Pemilik Honda CR-V",
-        image:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      },
-      {
-        quote:
-          "Custom suspensi untuk track day sesuai ekspektasi. Performa mobil saya meningkat signifikan.",
-        author: "Rudi Hartono",
-        position: "Enthusiast Modifikasi",
-        image:
-          "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      },
-    ];
+    {
+      quote: "Pelayanan Bagus rapi & cepat biaya aman di kantong.",
+      author: "Mas Wahyono",
+      position: "Pemilik Toyota Fortuner",
+      image: imgTesti1,
+    },
+    {
+      quote:
+        "Service dari karyawan ok banget, kualitas Per gak kalah sama brand yg lebih mahal.",
+      author: "Linda Sari",
+      position: "Pemilik Honda CR-V",
+      image: imgTesti2,
+    },
+    {
+      quote:
+        "Bengkelnya lokasi pinggir jalan, depan BRI. Pelayanan ramah dan cepat, pegawainya banyak jadi satset dan pastinya profesional bgt. Rekomen sekali buat bengkel apalagi khusus kaki-kaki.",
+      author: "Rudi Hartono",
+      position: "Pemilik Mitsubishi Pajero",
+      image: imgTesti3,
+    },
+  ];
   
     const [currentIndex, setCurrentIndex] = useState(0);
   
@@ -99,6 +106,42 @@ const Hero = () => {
     }
   };
 
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_3jkthpd",
+        "template_gwfcxng",
+        {
+          from_email: formData.email,
+        },
+        "PAVLgwtUyB49mdZzX"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Pesan berhasil dikirim!");
+          setFormData({ name: "", email: "", phone: "", message: "" });
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Gagal mengirim pesan, silakan coba lagi.");
+        }
+      );
+  };
+
   return (
     <>
       <section
@@ -117,21 +160,21 @@ const Hero = () => {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 fade-in">
                 <Link
-                to="/services" 
+                  to="/services"
                   className="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300"
                 >
                   Layanan Kami
                 </Link>
-                <button
-                  onClick={() => scrollToSection("contact")}
+                <Link
+                  to="/contact"
                   className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-lg transition duration-300"
                 >
                   Hubungi Kami
-                </button>
+                </Link>
               </div>
             </div>
             {/* gambar */}
-            <div className="w-full self-end px-4 lg:w-1/2">
+            <div data-aos="fade-up" className="w-full self-end px-4 lg:w-1/2">
               <div className="relative mt-10 lg:mt-0 lg:right-0">
                 <img
                   src="assets/hero.png"
@@ -147,7 +190,10 @@ const Hero = () => {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
         <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-r from-primary/5 to-secondary/5 transform -skew-y-3 -translate-y-24"></div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div
+          data-aos="fade-down"
+          className="container mx-auto px-6 relative z-10"
+        >
           <div className="flex flex-col lg:flex-row items-center gap-10">
             {/* Content */}
             <div className="lg:w-1/2">
@@ -232,7 +278,10 @@ const Hero = () => {
 
               {/* CTA Button */}
               <div className="mt-8">
-                <Link to="/services" className="bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                <Link
+                  to="/services"
+                  className="bg-gradient-to-r from-primary to-secondary text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+                >
                   Pelajari Lebih Lanjut
                 </Link>
               </div>
@@ -266,7 +315,7 @@ const Hero = () => {
       </section>
 
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800">
-        <div className="text-center mb-16">
+        <div data-aos="fade-down" className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 dark:text-white">
             Mengapa Harus{" "}
             <span className="text-primary">Maestro Suspension</span>
@@ -307,7 +356,7 @@ const Hero = () => {
       </section>
 
       <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-6">
+        <div data-aos="fade-down" className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
               Testimonial Pelanggan
@@ -407,22 +456,24 @@ const Hero = () => {
               jika Anda memiliki pertanyaan atau ingin mendiskusikan kebutuhan
               suspensi Anda, jangan ragu untuk menghubungi kami.
             </p>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="mt-10 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-lg transition duration-300 my-4"
-            >
-              Hubungi Kami
-              <span>
-                <svg
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 inline-block ml-2 fill-current"
-                >
-                  <title>Accenture</title>
-                  <path d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z" />
-                </svg>
-              </span>
-            </button>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+              <Link
+                to="/contact"
+                className="mt-10 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-lg transition duration-300 my-4"
+              >
+                Hubungi Kami
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 inline-block ml-2 fill-current"
+                  >
+                    <title>Accenture</title>
+                    <path d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z" />
+                  </svg>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -464,7 +515,8 @@ const Hero = () => {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/maestro_suspension/#"
+                  target="blank"
                   className="text-gray-400 hover:text-white transition duration-300"
                 >
                   <svg
@@ -487,52 +539,37 @@ const Hero = () => {
               <h3 className="text-xl font-semibold mb-4">Tautan Cepat</h3>
               <ul className="space-y-2">
                 <li>
-                  <button
-                    onClick={() => scrollToSection("home")}
+                  <Link
+                    to="/home"
                     className="text-gray-400 hover:text-white transition duration-300 text-left"
                   >
                     Home
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => scrollToSection("about")}
+                  <Link
+                    to="/about"
                     className="text-gray-400 hover:text-white transition duration-300 text-left"
                   >
                     Tentang Kami
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => scrollToSection("services")}
+                  <Link
+                    to="/services"
                     className="text-gray-400 hover:text-white transition duration-300 text-left"
                   >
                     Layanan
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => scrollToSection("team")}
-                    className="text-gray-400 hover:text-white transition duration-300 text-left"
-                  >
-                    Tim
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("testimonials")}
-                    className="text-gray-400 hover:text-white transition duration-300 text-left"
-                  >
-                    Testimonial
-                  </button>
-                </li>
-                <li>
-                  <button
+                  <Link
+                    to="/contact"
                     onClick={() => scrollToSection("contact")}
                     className="text-gray-400 hover:text-white transition duration-300 text-left"
                   >
                     Kontak
-                  </button>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -589,9 +626,13 @@ const Hero = () => {
                 Berlangganan newsletter kami untuk mendapatkan informasi terbaru
                 dan penawaran spesial.
               </p>
-              <form className="flex">
+              <form className="flex" onSubmit={handleSubmit}>
                 <input
                   type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email Anda"
                   className="px-4 py-2 w-full rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-800"
                   required
@@ -608,7 +649,7 @@ const Hero = () => {
 
           <div className="border-t border-gray-700 mt-10 pt-6 text-center">
             <p className="text-gray-400">
-              &copy; {new Date().getFullYear()} Maestro Suspension. All rights
+              &copy; {new Date().getFullYear()} Project Master. All rights
               reserved.
             </p>
           </div>

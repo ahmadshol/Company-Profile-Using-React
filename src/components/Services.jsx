@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Services = () => {
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
 
   useEffect(() => {
       window.scrollTo({
@@ -150,7 +157,7 @@ const Services = () => {
         id="services"
         className="py-20 bg-gradient-to-b from-gray-50 to-white dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-800"
       >
-        <div className="container mx-auto mt-20 px-6 fade-in">
+        <div data-aos="fade-right" className="container mx-auto mt-20 px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
               Layanan Kami
@@ -185,7 +192,7 @@ const Services = () => {
 
       <section id="Layanan" className="pb-16 bg-slate-100 dark:bg-dark">
         <div className="max-w-7xl mx-auto pt-10 px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div data-aos="fade-right">
             <h2 className="text-3xl font-bold mb-4">
               <span className="text-primary">Layanan</span>{" "}
               <span className="text-gray-900 dark:text-white">Unggulan</span>{" "}
@@ -287,7 +294,10 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div
+            data-aos="fade-left"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          >
             <div className="bg-slate-100 dark:bg-slate-800 rounded-xl shadow-md p-6 transform transition-transform duration-300 hover:scale-105 hover:-translate-y-1 cursor-pointer">
               <div className="bg-blue-100 text-primary w-10 h-10 flex items-center justify-center rounded-md mb-4">
                 <svg
@@ -377,7 +387,7 @@ const Services = () => {
 
       <section className="pb-16 bg-slate-100 dark:bg-dark">
         <div className="container max-w-7xl mx-auto px-6 py-12">
-          <div className="text-center mb-12">
+          <div data-aos="fade-down" className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               <span className="text-primary">FAQ</span>{" "}
               <span className="text-gray-900 dark:text-white">Layanan</span>
@@ -386,7 +396,10 @@ const Services = () => {
               Pertanyaan yang sering diajukan tentang layanan kami.
             </p>
           </div>
-          <div className="text-dark dark:text-white text-lg space-y-6 mx-auto font-bold outline-gray-500 outline-8 p-8 rounded-xl bg-slate-200 dark:bg-slate-800 dark:outline-slate-300 dark:outline-8">
+          <div
+            data-aos="fade-up"
+            className="text-dark dark:text-white text-lg space-y-6 mx-auto font-bold outline-gray-500 outline-8 p-8 rounded-xl bg-slate-200 dark:bg-slate-800 dark:outline-slate-300 dark:outline-8"
+          >
             <h1>
               Q: Berapa lama waktu yang dibutuhkan untuk ganti shockbreaker?
             </h1>
@@ -428,22 +441,24 @@ const Services = () => {
               jika Anda memiliki pertanyaan atau ingin mendiskusikan kebutuhan
               suspensi Anda, jangan ragu untuk menghubungi kami.
             </p>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="mt-10 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-lg transition duration-300 my-4"
-            >
-              Hubungi Kami
-              <span>
-                <svg
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 inline-block ml-2 fill-current"
-                >
-                  <title>Accenture</title>
-                  <path d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z" />
-                </svg>
-              </span>
-            </button>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+              <Link
+                to="/contact"
+                className="mt-10 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-lg transition duration-300 my-4"
+              >
+                Hubungi Kami
+                <span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 inline-block ml-2 fill-current"
+                  >
+                    <title>Accenture</title>
+                    <path d="m.66 16.95 13.242-4.926L.66 6.852V0l22.68 9.132v5.682L.66 24Z" />
+                  </svg>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
