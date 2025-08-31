@@ -120,7 +120,7 @@ const About = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-2xl">
                 <img
-                  src="assets/img1.jpg"
+                  src="/assets/img1.jpg"
                   alt="Tentang Maestro Suspension"
                   className="w-full h-auto rounded-2xl transition-transform duration-300 ease-out"
                   style={transformStyle}

@@ -177,7 +177,7 @@ const Hero = () => {
             <div data-aos="fade-up" className="w-full self-end px-4 lg:w-1/2">
               <div className="relative mt-10 lg:mt-0 lg:right-0">
                 <img
-                  src="assets/hero.png"
+                  src="/assets/hero.png"
                   alt="teamwork"
                   className="relative z-10 max-w-ful mx-auto rounded-xl mb-10"
                 />
@@ -292,7 +292,7 @@ const Hero = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-2xl">
                 <img
-                  src="assets/about.jpg"
+                  src="/assets/about.jpg"
                   alt="Tentang Maestro Suspension"
                   className="w-full h-auto rounded-2xl transition-transform duration-300 ease-out"
                   style={transformStyle}

@@ -72,7 +72,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="assets/logoms.webp"
+                src="/assets/logoms.webp"
                 alt="Maestro Suspension Logo"
                 className="w-9 h-9 object-cover rounded-full"
               />
