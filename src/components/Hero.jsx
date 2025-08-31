@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "@emailjs/browser";
-import imgTesti1 from "/assets/testi1.avif";
-import imgTesti2 from "/assets/testi2.avif";
-import imgTesti3 from "/assets/testi3.avif";
-
+import imgTesti1 from "../assets/testi1.avif";
+import imgTesti2 from "../assets/testi2.avif";
+import imgTesti3 from "../assets/testi3.avif";
+import heroImg from "../assets/hero.png";
+import aboutImg from "../assets/about.jpg";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -177,7 +178,7 @@ const Hero = () => {
             <div data-aos="fade-up" className="w-full self-end px-4 lg:w-1/2">
               <div className="relative mt-10 lg:mt-0 lg:right-0">
                 <img
-                  src="/assets/hero.png"
+                  src={heroImg}
                   alt="teamwork"
                   className="relative z-10 max-w-ful mx-auto rounded-xl mb-10"
                 />
@@ -292,7 +293,7 @@ const Hero = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-2xl">
                 <img
-                  src="/assets/about.jpg"
+                  src={aboutImg}
                   alt="Tentang Maestro Suspension"
                   className="w-full h-auto rounded-2xl transition-transform duration-300 ease-out"
                   style={transformStyle}

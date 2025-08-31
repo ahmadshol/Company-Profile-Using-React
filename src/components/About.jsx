@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import imgTim1 from "/assets/tim1.avif";
-import imgTim2 from "/assets/tim2.avif";
-import imgTim3 from "/assets/testi3.avif";
-import imgTim4 from "/assets/tim3.avif";
+import imgTim1 from "../assets/tim1.avif";
+import imgTim2 from "../assets/tim2.avif";
+import imgTim3 from "../assets/testi3.avif";
+import imgTim4 from "../assets/tim3.avif";
+import aboutImg from "../assets/about.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -120,7 +121,7 @@ const About = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-2xl">
                 <img
-                  src="/assets/img1.jpg"
+                  src={aboutImg}
                   alt="Tentang Maestro Suspension"
                   className="w-full h-auto rounded-2xl transition-transform duration-300 ease-out"
                   style={transformStyle}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logoImg from "../assets/logoms.webp";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +73,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/assets/logoms.webp"
+                src={logoImg}
                 alt="Maestro Suspension Logo"
                 className="w-9 h-9 object-cover rounded-full"
               />
