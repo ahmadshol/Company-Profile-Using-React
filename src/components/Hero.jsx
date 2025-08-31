@@ -8,6 +8,7 @@ import imgTesti2 from "../assets/testi2.avif";
 import imgTesti3 from "../assets/testi3.avif";
 import heroImg from "../assets/hero.png";
 import aboutImg from "../assets/about.jpg";
+import img1 from "../assets/img1.jpg";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -293,7 +294,7 @@ const Hero = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-500 group-hover:shadow-2xl">
                 <img
-                  src={aboutImg}
+                  src={img1}
                   alt="Tentang Maestro Suspension"
                   className="w-full h-auto rounded-2xl transition-transform duration-300 ease-out"
                   style={transformStyle}
