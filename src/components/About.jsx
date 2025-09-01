@@ -1,9 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import imgTim1 from "../assets/tim1.avif";
-import imgTim2 from "../assets/tim2.avif";
-import imgTim3 from "../assets/testi3.avif";
-import imgTim4 from "../assets/tim3.avif";
 import aboutImg from "../assets/about.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -62,33 +58,6 @@ const About = () => {
       }deg
     )`,
   };
-
-  const teamMembers = [
-    {
-      name: "Budi Santoso",
-      position: "Founder & CEO",
-      image: imgTim1,
-      expertise: "Suspension Specialist",
-    },
-    {
-      name: "Sari Wijaya",
-      position: "Head Technician",
-      image: imgTim2,
-      expertise: "Performance Tuning",
-    },
-    {
-      name: "Agus Pratama",
-      position: "Senior Mechanic",
-      image: imgTim3,
-      expertise: "Suspension Design",
-    },
-    {
-      name: "Dewi Lestari",
-      position: "Customer Service",
-      image: imgTim4,
-      expertise: "Client Relations",
-    },
-  ];
 
   return (
     <>
@@ -190,43 +159,139 @@ const About = () => {
         </div>
       </section>
 
-      <section id="team" className="py-20 bg-gray-200 dark:bg-dark">
+      <section id="technology" className="py-20 bg-gray-200 dark:bg-dark">
         <div data-aos="fade-up" className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 dark:text-white">
-              Tim Kami
+              Teknologi & Peralatan Kami
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto dark:text-gray-300">
-              Tim profesional kami siap memberikan pelayanan terbaik untuk
-              solusi suspensi kendaraan Anda.
+              Didukung dengan peralatan canggih dan teknologi terbaru untuk
+              hasil kerja yang presisi
             </p>
             <div className="w-20 h-1 bg-primary mx-auto mt-4"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 text-center dark:bg-gray-500"
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 object-cover hover:scale-95 transition-transform duration-300"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-1 dark:text-white">
-                    {member.name}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-500">
+              <div className="flex items-start mb-6">
+                <div className="bg-primary/10 p-3 rounded-lg mr-4">
+                  <svg
+                    className="w-8 h-8 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2 dark:text-white">
+                    Laser Alignment System
                   </h3>
-                  <p className="text-primary font-medium mb-2">
-                    {member.position}
-                  </p>
-                  <p className="text-gray-600 text-sm dark:text-white">
-                    {member.expertise}
+                  <p className="text-gray-600 dark:text-white">
+                    Sistem penyetelan suspensi presisi menggunakan teknologi
+                    laser untuk akurasi maksimal.
                   </p>
                 </div>
               </div>
-            ))}
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-500">
+              <div className="flex items-start mb-6">
+                <div className="bg-primary/10 p-3 rounded-lg mr-4">
+                  <svg
+                    className="w-8 h-8 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2 dark:text-white">
+                    Computerized Diagnostics
+                  </h3>
+                  <p className="text-gray-600 dark:text-white">
+                    Diagnosa komputer untuk menganalisa masalah suspensi secara
+                    detail dan akurat.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-500">
+              <div className="flex items-start mb-6">
+                <div className="bg-primary/10 p-3 rounded-lg mr-4">
+                  <svg
+                    className="w-8 h-8 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2 dark:text-white">
+                    Dynamic Testing Equipment
+                  </h3>
+                  <p className="text-gray-600 dark:text-white">
+                    Peralatan testing dinamik untuk mensimulasikan berbagai
+                    kondisi jalan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 dark:bg-gray-500">
+              <div className="flex items-start mb-6">
+                <div className="bg-primary/10 p-3 rounded-lg mr-4">
+                  <svg
+                    className="w-8 h-8 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2 dark:text-white">
+                    High-Performance Parts
+                  </h3>
+                  <p className="text-gray-600 dark:text-white">
+                    Hanya menggunakan suku cadang berkualitas tinggi dan teruji
+                    performanya.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
