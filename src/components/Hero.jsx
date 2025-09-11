@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "@emailjs/browser";
-import imgTesti1 from "../assets/testi1.avif";
-import imgTesti2 from "../assets/testi2.avif";
-import imgTesti3 from "../assets/testi3.avif";
 import heroImg from "../assets/hero.png";
-import aboutImg from "../assets/about.jpg";
 import img1 from "../assets/img1.jpg";
 
 const Hero = () => {
