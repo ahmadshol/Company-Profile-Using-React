@@ -71,21 +71,18 @@ const Hero = () => {
       quote: "Pelayanan Bagus rapi & cepat biaya aman di kantong.",
       author: "Mas Wahyono",
       position: "Pemilik Toyota Fortuner",
-      image: imgTesti1,
     },
     {
       quote:
         "Service dari karyawan ok banget, kualitas Per gak kalah sama brand yg lebih mahal.",
       author: "Linda Sari",
       position: "Pemilik Honda CR-V",
-      image: imgTesti2,
     },
     {
       quote:
         "Bengkelnya lokasi pinggir jalan, depan BRI. Pelayanan ramah dan cepat, pegawainya banyak jadi satset dan pastinya profesional bgt. Rekomen sekali buat bengkel apalagi khusus kaki-kaki.",
       author: "Rudi Hartono",
       position: "Pemilik Mitsubishi Pajero",
-      image: imgTesti3,
     },
   ];
   
@@ -387,11 +384,6 @@ const Hero = () => {
                 </p>
 
                 <div className="flex items-center justify-center">
-                  <img
-                    src={testimonials[currentIndex].image}
-                    alt={testimonials[currentIndex].author}
-                    className="w-12 h-12 rounded-full mr-4 object-cover"
-                  />
                   <div>
                     <h4 className="font-semibold text-gray-800 dark:text-white">
                       {testimonials[currentIndex].author}
