@@ -40,28 +40,16 @@ const Services = () => {
     },
     {
       icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
+        <svg xmlns="http://www.w3.org/2000/svg"
           className="h-12 w-12 text-primary"
           fill="none"
           viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
+          stroke="currentColor">
+          <title>Helix</title>
+          <path d="M12.968 4.97 4.364 0v3.55c0 .449.239.863.627 1.087l4.276 2.47zm5.339 3.083-3.7 2.138 4.86 2.807c.11-.19.17-.407.17-.633V9.552c0-.452-.241-.87-.633-1.096zm1.33 12.397c0-.449-.24-.863-.627-1.087l-4.253-2.456-3.7 2.137L19.637 24zm-13.92-4.49 3.7-2.137c-2.703-1.562-4.884-2.82-4.884-2.82a1.26 1.26 0 0 0-.17.632v2.813c0 .452.242.87.634 1.096zm-.287-1.252a.93.93 0 0 1 .343-.342l12.455-7.194-.01.007.786-.455c.392-.226.633-.643.633-1.096V2.815c0-.452-.241-.87-.633-1.096l-.765-.442a.944.944 0 0 1-.005 1.617l-.006.004-13.231 7.641a1.26 1.26 0 0 0-.633 1.096v2.813c0 .453.24.87.633 1.096l.72.416h.002a.944.944 0 0 1-.29-1.252m12.873-6.652a.945.945 0 0 1-.07 1.575l-.005.004-13.231 7.641a1.26 1.26 0 0 0-.633 1.096v2.813c0 .452.24.87.633 1.096l.765.442a.945.945 0 0 1 .01-1.62l12.456-7.194-.01.006.786-.454c.392-.226.633-.644.633-1.096V9.552c0-.453-.241-.87-.633-1.096l-.697-.403z" />
         </svg>
       ),
-      title: "Lowring kit/Per Custom",
+      title: "Lowring kit/Per Racing",
       description:
         "Dapat Melayani Custom Suspensi sesuai kebutuhan dan preferensi pengendara untuk performa optimal.",
     },
@@ -98,7 +86,7 @@ const Services = () => {
           <path d="M10.98 0c-.235 0-.425.2-.425.446V8.92c0 .246-.19.446-.425.446h-.704c-.346 0-.547.41-.346.705l2.574 3.782c.17.25.522.25.692 0l2.574-3.782c.201-.295 0-.705-.346-.705h-.704a.436.436 0 0 1-.425-.446V.446A.436.436 0 0 0 13.02 0ZM7.387 1.562a.732.732 0 0 0-.405.161l-1.096.883a.77.77 0 0 0-.123 1.066.735.735 0 0 0 1.045.126l1.096-.882a.77.77 0 0 0 .123-1.067.738.738 0 0 0-.64-.287Zm9.346 0a.737.737 0 0 0-.64.287.77.77 0 0 0 .123 1.067l1.096.882c.323.26.79.204 1.045-.126a.77.77 0 0 0-.123-1.066l-1.096-.883a.733.733 0 0 0-.405-.16ZM3.039 6.036a.745.745 0 0 0-.675.48l-.512 1.326c-.15.39.037.831.42.985a.74.74 0 0 0 .965-.428l.512-1.325a.765.765 0 0 0-.419-.985.728.728 0 0 0-.291-.053Zm18.042 0a.738.738 0 0 0-.29.053.765.765 0 0 0-.42.985l.512 1.325a.74.74 0 0 0 .965.428.765.765 0 0 0 .42-.985l-.512-1.325a.745.745 0 0 0-.675-.481ZM0 12a12 12 0 0 0 .913 4.592 11.997 11.997 0 0 0 2.42 3.703c.684-.681 1.565-1 2.489-1.053.925-.055 1.893.156 2.745.532a8.497 8.497 0 0 0 6.866 0c1.702-.751 3.865-.843 5.234.52a11.997 11.997 0 0 0 2.42-3.702A12 12 0 0 0 24 12h-3.687c-1.301 0-2.315 1.094-2.813 2.296a6 6 0 0 1-11.087 0C5.915 13.094 4.902 12 3.601 12Zm5.875 7.769c-.727.04-1.407.275-1.957.727-.073.06-.14.119-.204.18a11.997 11.997 0 0 0 3.694 2.41 12 12 0 0 0 9.184 0 11.997 11.997 0 0 0 3.694-2.41 3.977 3.977 0 0 0-.204-.18c-1.173-.963-2.96-.892-4.436-.24a9.023 9.023 0 0 1-7.292 0c-.478-.211-1.418-.546-2.48-.487Z" />
         </svg>
       ),
-      title: "Modifikasi Ceper",
+      title: "Modifikasi Ceper / Tinggi",
       description:
         "Layanan modifikasi suspensi ceper untuk tampilan sporty dan performa maksimal.",
     },
@@ -117,22 +105,6 @@ const Services = () => {
       title: "Shock beaker",
       description:
         "menjadikan shock beaker berkualitas tinggi untuk meningkatkan kenyamanan berkendara.",
-    },
-    {
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-12 w-12 text-primary"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path d="M12 0c6.6274 0 12 5.3726 12 12s-5.3726 12-12 12S0 18.6274 0 12 5.3726 0 12 0Zm2.5535 5.6062a2.7033 2.7033 0 0 0-.7421 1.3856c-1.923-.7238-4.1285-.264-5.5968 1.2045-1.4696 1.4696-1.929 3.6777-1.2024 5.6018a2.7037 2.7037 0 0 0-1.3947.7441c-1.0604 1.0604-1.0604 2.7799 0 3.8403 1.0605 1.0604 2.7798 1.0604 3.8403 0a2.7035 2.7035 0 0 0 .746-1.4034 5.255 5.255 0 0 0 1.8373.332c1.3756 0 2.7344-.5344 3.7442-1.5442 1.463-1.463 1.9253-3.6579 1.2127-5.576a2.703 2.703 0 0 0 1.3957-.7444c1.0605-1.0604 1.0605-2.7798 0-3.8403-1.0604-1.0604-2.7798-1.0604-3.8402 0zm3.1724 3.1725c-.4029.403-.9577.5877-1.5231.5072a.3058.3058 0 0 0-.0793.0001.9214.9214 0 0 0-.9875.6035.9208.9208 0 0 0 .0307.7007c.602 1.3006.3253 2.8556-.6886 3.8695-1.014 1.0138-2.569 1.291-3.87.6884a.9211.9211 0 0 0-.7098-.0276.9212.9212 0 0 0-.5172.4781.9195.9195 0 0 0-.0831.4539.308.308 0 0 0 0 .0915 1.7992 1.7992 0 0 1-.5009 1.5636c-.6991.699-1.8368.699-2.5362 0a1.7821 1.7821 0 0 1-.5252-1.2681c0-.4791.1865-.9295.5252-1.2682.4028-.4029.9579-.5873 1.5516-.506a.921.921 0 0 0 .1824.0205c.13 0 .262-.0277.3877-.0858a.9213.9213 0 0 0 .4753-.5104.921.921 0 0 0-.0247-.7167c-.602-1.3006-.3253-2.8555.6886-3.8694 1.014-1.014 2.5692-1.2909 3.87-.6885a.9212.9212 0 0 0 .7074.0287.9218.9218 0 0 0 .5197-.4792c.083-.1793.103-.3715.07-.5583a1.7988 1.7988 0 0 1 .5009-1.5637c.6991-.6993 1.8369-.6993 2.536 0 .6993.6993.6993 1.837 0 2.5362zm-7.1177 1.8111c-.7758.7759-.7758 2.0337 0 2.8095.7759.776 2.0338.776 2.8096 0 .7758-.7758.7758-2.0336 0-2.8095-.7758-.7757-2.0337-.7757-2.8096 0z" />
-        </svg>
-      ),
-      title: "Wheel Alignment & Balancing",
-      description:
-        "Wheel alignment dan balancing adalah langkah wajib. Kami menggunakan teknologi laser alignment terbaru untuk hasil yang presisi.",
     },
   ];
 
@@ -204,7 +176,7 @@ const Services = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white">
-                    Modifikasi Ceper
+                    Modifikasi Ceper / Tinggi
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-white">
                     menurunkan ketinggian kendaraan untuk tampilan sporty dan
@@ -222,17 +194,16 @@ const Services = () => {
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <title>Cachet</title>
                     <path d="M11.746.254C5.265.254 0 5.519 0 12c0 6.481 5.265 11.746 11.746 11.746 6.482 0 11.746-5.265 11.746-11.746 0-1.44-.26-2.82-.734-4.097l-.264-.709-1.118 1.118.1.288c.373 1.064.575 2.207.575 3.4a10.297 10.297 0 01-10.305 10.305A10.297 10.297 0 011.441 12 10.297 10.297 0 0111.746 1.695c1.817 0 3.52.47 5.002 1.293l.32.178 1.054-1.053-.553-.316A11.699 11.699 0 0011.746.254zM22.97.841l-13.92 13.92-3.722-3.721-1.031 1.03 4.752 4.753L24 1.872z" />
                   </svg>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white">
-                    Wheel Alignment & Balancing
+                    Jasa Dalam Pemasangan Sparepart Suspensi Mobil.
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-white">
-                    Menyelaraskan roda kendaraan untuk memastikan kenyamanan dan
-                    keamanan berkendara.
+                    Menyediakan jasa pemasangan sparepart suspensi mobil oleh
+                    Teknisi Profesional.
                   </p>
                 </div>
               </div>
@@ -297,11 +268,13 @@ const Services = () => {
                 </svg>{" "}
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-1 dark:text-white">
-                Diagnosa & Konsultasi Gratis
+                Melayani Berbagai Jenis perbaikan
               </h3>
               <p className="text-sm text-gray-600 dark:text-white">
-                Kami menyediakan layanan diagnosa dan konsultasi gratis untuk
-                semua pelanggan kami.
+                perbaikan paket service kaki-kaki mobil, perbaikan shock beaker,
+                perbaikan worm rackstir eps, dan perbaikan segala keluhan
+                suspensi seperti menyelesaikan masalah bunyi2 asing pada
+                suspensi.
               </p>
             </div>
 
@@ -362,8 +335,10 @@ const Services = () => {
                 Parts Berkualitas
               </h3>
               <p className="text-sm text-gray-600 dark:text-white">
-                Kami hanya menggunakan suku cadang berkualitas tinggi untuk
-                memastikan kinerja optimal.
+                menyediakan produk suspensi mobil pada umumnya seperti boshing
+                support shock dan sperpart suspensi lainnya, yang paling Utama
+                kami menyediakan sperpart lowringkit racing dengan merk maestro
+                suspension
               </p>
             </div>
           </div>

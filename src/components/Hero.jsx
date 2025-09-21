@@ -197,15 +197,7 @@ const Hero = () => {
                 <span className="text-primary">Kenyamanan kendaraan anda</span>
               </h3>
               <p className="text-gray-600 mb-6 leading-relaxed text-lg dark:text-white">
-                Sebagai Maestro Suspension, kami paham betul tantangan yang
-                dihadapi para pecinta otomotif dan bengkel dalam menemukan
-                solusi berkendara yang nyaman dan handal. Untuk itu, kami
-                menghadirkan rangkaian produk suspensi unggulan yang dirancang
-                khusus untuk meningkatkan stabilitas kendaraan Anda,
-                menyesuaikan dengan berbagai kebutuhan berkendara, dan
-                memberikan pengalaman menyetir yang lebih mulus. Percayakan pada
-                kami untuk mendampingi setiap perjalanan Anda dengan solusi yang
-                tepat dan berkinerja terbaik.
+                Sebagai Maestro Suspension, kami paham betul tantangan yang dihadapi para pecinta otomotif dalam menemukan solusi berkendara yang nyaman. Dari proses perjalanan berbekal kemampuan serta pengalaman yang sudah lama dan terus di kembangkan mengenai solusi berkendara yang nyaman, handal serta aman, kami menghadirkan rangkaian jasa dan produk suspense unggulan yang dirancang khusus untuk meningkatkan stabilitas kendaraan Anda, menyesuaikan dengan berbagai kebutuhan berkendara, dan memberikan pengalaman menyetir yang lebih nyaman serta aman. Percayakan pada kami untuk mendampingi setiap perjalanan Anda dengan solusi yang tepat dan berkinerja terbaik.
               </p>
 
               {/* Stats */}
