@@ -630,10 +630,14 @@ const Hero = () => {
           </div>
 
           <div className="border-t border-gray-700 mt-10 pt-6 text-center">
-            <p className="text-gray-400">
+            <a
+                  href="https://www.projectmaster.id/"
+                  target="blank"
+                  className="text-gray-400 hover:text-white transition duration-300"
+                >
               &copy; {new Date().getFullYear()} Project Master. All rights
               reserved.
-            </p>
+                </a>
           </div>
         </div>
       </footer>
